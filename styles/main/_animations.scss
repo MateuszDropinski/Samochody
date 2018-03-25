@@ -1,0 +1,11 @@
+@keyframes reminder{
+    0%{background-color: $remind-color-2;}
+    67%{background-color: $remind-color-1;}
+    100%{background-color: $remind-color-2;}
+}
+
+@keyframes warning{
+    0%{background-color: $warning-color-2;}
+    67%{background-color: $warning-color-1;}
+    100%{background-color: $warning-color-2;}
+}

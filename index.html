@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Baza samochodów</title>
+    <meta name="author" content="Mateusz Dropiński">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <section class="page-container" data-ng-controller="homeController">
+        <header class="header">
+            <button class="add-car-button" data-ng-click="addCarForm()"><span>Dodaj pojazd</span> <i class="fa fa-plus" aria-hidden="true"></i></button>
+            <input type="text" data-ng-model="query[queryBy]" placeholder="Szukaj..." class="search">
+            <aside class="header-info">
+                <section class="header-info-show">
+                    <i class="fa fa-exclamation fa-3x" aria-hidden="true"></i>
+                    <span class="header-info-show-amount" data-ng-bind="remindersAmount.value"></span>
+                </section>            
+                <section class="header-info-background">
+                    <button class="close">Zamknij <i class="fa fa-times" aria-hidden="true"></i></button>
+                    <section class="header-info-container">
+                        <warning data-ng-repeat="warning in warnings | orderBy:'date'"></warning>
+                        <reminder data-ng-repeat="reminder in reminders | orderBy:'date'"></reminder>
+                        <p class="create-margin-bottom">test</p>
+                    </section>
+                </section>
+            </aside>
+        </header>    
+        <div class="page-container-cars">
+            <car data-ng-repeat="car in cars | filter:query | orderBy:'mark'" car="car" index="$index"></car>
+        </div>  
+        <div class="change-data-background">
+            <section class="change-data">
+                <header class="change-data-header"></header>
+                <article class="change-data-element"></article>
+                <section class="buttons">
+                    <button class="change-data-close">Zamknij <i class="fa fa-times" aria-hidden="true"></i></button>
+                    <button class="change-data-save" data-ng-click="saveData()">Zapisz <i class="fa fa-check" aria-hidden="true"></i></button>
+                </section>
+                <span class="change-data-error" data-ng-bind="emptyError"></span>
+            </section>
+        </div> 
+        <div class="delete-car-background">
+            <section class="delete-car">
+                <header class="delete-car-header">Czy na pewno usunąć?</header>
+                <section class="buttons">
+                    <button class="delete-car-disagree">Nie <i class="fa fa-times" aria-hidden="true"></i></button>
+                    <button class="delete-car-agree">Tak <i class="fa fa-check" aria-hidden="true"></i></button>
+                </section>
+            </section>
+        </div>
+        <div class="add-car-background">
+            <addcar></addcar>
+        </div>
+    </section>
+
+    <script src="scripts/datepicker.js"></script>
+    <script src="app.bundle.js"></script>    
+</body>
+</html>

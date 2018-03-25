@@ -1,0 +1,53 @@
+<section class="car" data-car-index="$index">
+    <header class="car-header">
+        <p data-ng-bind="car.mark" data-ng-click="changeText(car.mark , 'mark')"></p>
+        <p data-ng-bind="car.registration" data-ng-click="changeText(car.registration , 'registration')"></p>
+        <button class="car-header-delete" data-ng-click="askForDelete()"><i class="fa fa-trash" aria-hidden="true"></i></button>
+    </header>
+    <article class="car-informations">
+        <ul class="year" data-ng-click="changeText(car.year , 'year')">
+            <li>Rok produkcji</li>
+            <li data-ng-bind="car.year"></li>
+        </ul>
+        <ul class="vin" data-ng-click="changeText(car.vin , 'vin')">
+            <li>VIN</li>
+            <li data-ng-bind="car.vin"></li>
+        </ul>
+        <ul class="elevator_date" data-ng-click="changeDate(car.elevator_date , 'elevator_date')">
+            <li>Przegląd windy</li>
+            <li data-ng-bind="car.elevator_date"></li>
+        </ul>
+        <ul class="car_date" data-ng-click="changeDate(car.car_date , 'car_date')">
+            <li>Przegląd samochodu</li>
+            <li data-ng-bind="car.car_date"></li>
+        </ul>
+        <ul class="tacho_date" data-ng-click="changeDate(car.tacho_date , 'tacho_date')">
+            <li>Przegląd Tacho</li>
+            <li data-ng-bind="car.tacho_date"></li>
+        </ul>
+        <ul class="car_insurance_date" data-ng-click="changeDate(car.car_insurance_date , 'car_insurance_date')">
+            <li>Ubezpieczenie samochodu</li>
+            <li data-ng-bind="car.car_insurance_date"></li>
+        </ul>
+        <ul class="commodity_insurance_date" data-ng-click="changeDate(car.commodity_insurance_date , 'commodity_insurance_date')">
+            <li>Ubezpieczenie towaru</li>
+            <li data-ng-bind="car.commodity_insurance_date"></li>
+        </ul>
+        <ul class="atp" data-ng-click="changeDate(car.atp , 'atp')">
+            <li>ATP</li>
+            <li data-ng-bind="car.atp"></li>
+        </ul>
+        <ul class="oil_date" data-ng-click="changeDate(car.oil_date , 'oil_date')">
+            <li>Wymiana oleju</li>
+            <li data-ng-bind="car.oil_date"></li>
+        </ul>
+        <ul class="fuel" data-ng-click="changeText(car.fuel , 'fuel')">
+            <li>Paliwo</li>
+            <li data-ng-bind="car.fuel"></li>
+        </ul>
+        <div class="car-others" data-ng-click="changeOthers(car.others , 'others')">
+            <p>Inne</p>
+            <p data-ng-bind="car.others"></p>
+        </div>
+    </article>
+</section>

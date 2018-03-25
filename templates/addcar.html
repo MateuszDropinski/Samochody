@@ -1,0 +1,46 @@
+<form class="add-car" novalidate>
+    <button type="button" class="add-car-close" data-ng-click="closeAddCar()">Zamknij <i class="fa fa-times" aria-hidden="true"></i></button>
+    <label for="mark">Marka:
+        <input type="text" ng-model="car.mark" id="mark" required>
+        <span class="add-car-error" data-ng-bind="error.mark"></span>
+    </label>
+    <label for="registration">Rejestracja:
+        <input type="text" ng-model="car.registration" id="registration" required>
+        <span class="add-car-error" data-ng-bind="error.registration"></span>
+    </label>
+    <label for="year">Rok produkcji:
+        <input type="text" ng-model="car.year" id="year">
+    </label>
+    <label for="vin">VIN:
+        <input type="text" ng-model="car.vin" id="vin">
+    </label>
+    <label for="elevator_date">Przegląd windy:
+        <input class="add-car-date" ng-model="car.elevator_date" type="text" id="elevator_date">
+    </label>
+    <label for="car_date">Przegląd samochodu:
+        <input class="add-car-date" ng-model="car.car_date" type="text" id="car_date">
+    </label>
+    <label for="tacho_date">Przegląd Tacho:
+        <input class="add-car-date" ng-model="car.tacho_date" type="text" id="tacho_date">
+    </label>
+    <label for="car_insurance_date">Ubezpieczenie samochodu:
+        <input class="add-car-date" ng-model="car.car_insurance_date" type="text" id="car_insurance_date">
+    </label>
+    <label for="commodity_insurance_date">Ubezpieczenie towaru:
+        <input class="add-car-date" ng-model="car.commodity_insurance_date" type="text" id="commodity_insurance_date">
+    </label>
+    <label for="atp">ATP:
+        <input class="add-car-date" ng-model="car.atp" type="text" id="atp">
+    </label>
+    <label for="oil_date">Wymiana oleju:
+        <input class="add-car-date" ng-model="car.oil_date" type="text" id="oil_date">
+    </label>
+    <label for="fuel">Paliwo:
+        <input type="text" ng-model="car.fuel" id="fuel">
+    </label>
+    <label for="others">Inne:
+        <textarea ng-model="car.others" id="others"></textarea>
+    </label>
+    <button data-ng-click="addCar()" type="button" class="add-car-save">Dodaj <i class="fa fa-check" aria-hidden="true"></i></button>
+    <p>test</p>
+</form>

@@ -1,0 +1,29 @@
+body, html
+{
+    @include gradient;
+    color:#ededed;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    font-size: 100%;
+    min-height: 100vh;
+    @media screen and(max-width:900px)
+    {
+        font-size: 80%;
+    }
+}
+body
+{
+    margin:0px;
+}
+.fa-3x
+{
+    font-size: 3rem;
+}
+.fa-2x
+{
+    font-size: 2rem;
+}
+.fa-4x
+{
+    font-size: 4rem;
+}

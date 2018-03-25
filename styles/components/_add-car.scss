@@ -1,0 +1,93 @@
+.add-car-background
+{
+    position:fixed;
+    width: 100vw;
+    min-height: 100vh;
+    top:0px;
+    left:0px;
+    background-color: rgba(157, 157, 157, 0.46);
+    display:none;
+}
+
+.add-car
+{
+    display:flex;
+    overflow-y: scroll;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    height: 80vh;
+    box-sizing: border-box;
+    position: absolute;
+    @include gradient;
+    border-radius:2px;
+    padding:25px;
+    box-sizing: border-box;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    width: 300px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    label
+    {
+        display: flex;
+        flex-direction: column;
+        margin:8px 0px;
+        color:#000000;
+        width: 100%;
+        input
+        {
+            margin-top: 5px;
+            width: 100%;
+            padding:5px;
+            box-sizing: border-box;
+        }
+        textarea
+        {
+            width: 100%;
+            resize: none;
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+    &-close
+    {
+        cursor:pointer;
+        background-color:#c41414;
+        color:$gray-color;
+        font-weight: bold;
+        padding:5px 15px;
+        transition:.25s;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        font-size: 1rem;
+        flex-basis: 100%;
+        &:hover
+        {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+    }
+    &-save
+    {
+        background-color: #34de62;
+        color:$gray-color;
+        padding:5px 15px;
+        font-size: 1rem;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        cursor:pointer;
+        font-weight: bold;
+        margin-top: 10px;
+        flex-basis: 100%;
+        &:hover
+        {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+    }
+    p
+    {
+        opacity:0;
+    }
+    &-error
+    {
+        color:$warning-color-1;
+    }
+}

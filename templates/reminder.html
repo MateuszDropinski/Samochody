@@ -1,0 +1,15 @@
+<article class="reminder" data-ng-click="changeDate(reminder.date , reminder.event , reminder.registration)">
+    <div class="icon">
+        <i class="fa fa-exclamation-triangle fa-3x" aria-hidden="true"></i>
+    </div>        
+    <section class="reminder-car">
+        <header class="reminder-car">
+            <p class="reminder-car-mark" data-ng-bind="reminder.mark"></p>
+            <p class="reminder-car-registration" data-ng-bind="reminder.registration"></p>
+        </header>
+        <article>
+            <p class="reminder-car-event" data-ng-bind="reminder.event"></p>
+            <p class="reminder-car-date" data-ng-bind="reminder.date"></p>
+        </article>        
+    </section>
+</article>

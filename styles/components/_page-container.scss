@@ -1,0 +1,16 @@
+.page-container
+{
+    width: 100%;
+    box-sizing: border-box;
+    padding:25px; 
+    @media screen and(max-width:800px)
+    {
+        padding: 10px;
+    }
+    &-cars
+    {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+}
